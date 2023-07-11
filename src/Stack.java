@@ -25,8 +25,21 @@ public class Stack {
         }
     }
 
+    public void pop() {
+        if (top == -1) {
+            System.out.println("Underflow");
+        } else {
+            int poppedElement = stack[top];
+            top--;
+            System.out.println("Element " + poppedElement + " popped from the stack.");
+        }
+    }
+
     public static void main(String[] args) {
         Stack stack = new Stack();
         stack.push();
+
+        System.out.println("Removing the first element from the stack:");
+        stack.pop();
     }
 }
