@@ -45,6 +45,14 @@ public class Stack {
         }
     }
 
+    public void traverse(){
+        int pointer = top;
+        while (pointer != -1){
+            System.out.println(pointer);
+            pointer = pointer - 1;
+        }
+    }
+
     public static void main(String[] args) {
         Stack stack = new Stack();
         stack.push();
@@ -54,6 +62,9 @@ public class Stack {
 
         System.out.println("Returning Peek Element");
         stack.peek();
+
+        System.out.println("Finally we traverse this stack");
+        stack.traverse();
 
     }
 }
