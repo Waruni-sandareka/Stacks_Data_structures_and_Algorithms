@@ -35,11 +35,25 @@ public class Stack {
         }
     }
 
+    public void peek(){
+        if(top==-1){
+            System.out.println("Underflow");
+        }
+        else{
+            int topElement = stack[top];
+            System.out.println("peek element = " + topElement );
+        }
+    }
+
     public static void main(String[] args) {
         Stack stack = new Stack();
         stack.push();
 
         System.out.println("Removing the first element from the stack:");
         stack.pop();
+
+        System.out.println("Returning Peek Element");
+        stack.peek();
+
     }
 }
